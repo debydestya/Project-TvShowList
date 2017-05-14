@@ -24,12 +24,16 @@ public class GsonGetRequest<T> extends Request<T> {
         this.clazz = clazz;
         this.headers = headers;
         this.listener = listener;
-
     }
 
     @Override
     public Map<String, String> getHeaders() throws AuthFailureError {
         return headers != null ? headers : super.getHeaders();
+    }
+
+    @Override
+    protected void deliverResponse(T response) {
+        listener.onResponse(response);
     }
 
     @Override
@@ -46,10 +50,5 @@ public class GsonGetRequest<T> extends Request<T> {
         } catch (JsonSyntaxException e) {
             return Response.error(new ParseError(e));
         }
-    }
-
-    @Override
-    protected void deliverResponse(T response) {
-        listener.onResponse(response);
     }
 }
