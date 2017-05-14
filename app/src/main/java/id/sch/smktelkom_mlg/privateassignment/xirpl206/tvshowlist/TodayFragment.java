@@ -27,12 +27,12 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.service.Volley
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AiringFragment extends Fragment {
+public class TodayFragment extends Fragment {
 
     ArrayList<Result> mList = new ArrayList<>();
     AiringShowAdapter mAdapter;
 
-    public AiringFragment() {
+    public TodayFragment() {
         // Required empty public constructor
     }
 
@@ -41,7 +41,7 @@ public class AiringFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_air, container, false);
+        return inflater.inflate(R.layout.fragment_tod, container, false);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class AiringFragment extends Fragment {
     }
 
     private void downloadDataSources() {
-        String url = "https://api.themoviedb.org/3/tv/on_the_air?api_key=084dce461c433fe125d98636470b032c";
+        String url = "https://api.themoviedb.org/3/tv/airing_today?api_key=084dce461c433fe125d98636470b032c";
 
         GsonGetRequest<SourcesResponse> myRequest = new GsonGetRequest<SourcesResponse>
                 (url, SourcesResponse.class, null, new Response.Listener<SourcesResponse>() {
@@ -80,6 +80,5 @@ public class AiringFragment extends Fragment {
                 });
         VolleySingleton.getInstance(this.getActivity()).addToRequestQueue(myRequest);
     }
-
 
 }

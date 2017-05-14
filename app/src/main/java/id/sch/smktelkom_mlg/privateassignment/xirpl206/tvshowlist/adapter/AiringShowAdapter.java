@@ -42,7 +42,7 @@ public class AiringShowAdapter extends RecyclerView.Adapter<AiringShowAdapter.Vi
         holder.tvName.setText(result.original_name);
         holder.tvDesc.setText(result.overview);
         Glide.with(context)
-                .load("http://image.tmdb.org/t/p/w500" + result.poster_path)
+                .load("http://image.tmdb.org/t/p/w500" + result.backdrop_path)
                 .into(holder.iv_poster);
     }
 
@@ -54,7 +54,7 @@ public class AiringShowAdapter extends RecyclerView.Adapter<AiringShowAdapter.Vi
     }
 
     public interface IComingSoonAdapter {
-        void showArticles(String original_title, String overview, String poster_path);
+        void showArticles(String original_title, String overview, String backdrop_path);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

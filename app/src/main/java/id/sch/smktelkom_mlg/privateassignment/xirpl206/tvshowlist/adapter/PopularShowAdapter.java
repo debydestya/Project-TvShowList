@@ -43,7 +43,7 @@ public class PopularShowAdapter extends RecyclerView.Adapter<PopularShowAdapter.
         holder.tvName.setText(result.original_name);
         holder.tvDesc.setText(result.overview);
         Glide.with(context)
-                .load("http://image.tmdb.org/t/p/w500" + result.poster_path)
+                .load("http://image.tmdb.org/t/p/w500" + result.backdrop_path)
                 .into(holder.iv_poster);
     }
 
@@ -55,7 +55,7 @@ public class PopularShowAdapter extends RecyclerView.Adapter<PopularShowAdapter.
     }
 
     public interface ISourceAdapter {
-        void showArticles(String original_name, String overview, String poster_path);
+        void showArticles(String original_name, String overview, String backdrop_path);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
