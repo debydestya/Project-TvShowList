@@ -89,6 +89,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_popular) {
             fragment = new PopularFragment();
             setTitle("Popular TV Show");
+        } else if (id == R.id.nav_about) {
+            fragment = new AboutFragment();
+            setTitle("About Us");
         }
 
         getSupportFragmentManager().beginTransaction()
