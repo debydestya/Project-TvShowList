@@ -8,4 +8,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- APP INTRO -->
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">TV Nation</string>
+    <string name="slide_1_desc"> Get all of TV Show Database easily and make your TV Surfing more FUN! </string>
+
+    <string name="slide_2_title">Sit Back and Relax</string>
+    <string name="slide_2_desc"> This app is really easy to use :) </string>
+
+    <string name="slide_3_title">Internet Connection</string>
+    <string name="slide_3_desc">You need internet connection to access TV Show data </string>
+
+    <string name="slide_4_title">Enjoy Our App</string>
+    <string name="slide_4_desc">Enjoy our app!</string>
 </resources>
