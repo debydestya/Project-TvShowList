@@ -20,7 +20,7 @@ API yang digunakan adalah API <b>TMDB</b>
 Menggunakkan Navigation 4, yaitu Drawer
 
 # Local Database
-SQLite
+SQLite Dasar
 
 # Kelebihan Aplikasi
 1. Aplikasi ini mengusung tampilan yang simple, sehingga memudahkan pengguna
