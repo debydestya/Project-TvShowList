@@ -18,7 +18,7 @@ import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
-import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.adapter.AiringShowAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.adapter.ShowAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.modul.Result;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.modul.SourcesResponse;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.service.GsonGetRequest;
@@ -31,7 +31,7 @@ import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.service.Volley
 public class AiringFragment extends Fragment {
 
     ArrayList<Result> mList = new ArrayList<>();
-    AiringShowAdapter mAdapter;
+    ShowAdapter mAdapter;
 
     public AiringFragment() {
         // Required empty public constructor
@@ -42,7 +42,7 @@ public class AiringFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_air, container, false);
+        return inflater.inflate(R.layout.fragment_pop, container, false);
     }
 
     @Override
@@ -51,7 +51,7 @@ public class AiringFragment extends Fragment {
 
         RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getActivity()));
-        mAdapter = new AiringShowAdapter(this.getActivity(), mList);
+        mAdapter = new ShowAdapter(this.getActivity(), mList);
         recyclerView.setAdapter(mAdapter);
 
         downloadDataSources();

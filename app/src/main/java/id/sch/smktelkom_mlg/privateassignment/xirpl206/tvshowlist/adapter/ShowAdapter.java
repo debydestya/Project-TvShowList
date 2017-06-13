@@ -16,34 +16,36 @@ import java.util.ArrayList;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.R;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.modul.Result;
 
-public class AiringShowAdapter extends RecyclerView.Adapter<AiringShowAdapter.ViewHolder> {
+public class ShowAdapter extends RecyclerView.Adapter<ShowAdapter.ViewHolder> {
     ArrayList<Result> list;
-    AiringShowAdapter.IComingSoonAdapter mIComingSoonAdapter;
+    ShowAdapter.IComingSoonAdapter mIComingSoonAdapter;
     Context context;
 
 
-    public AiringShowAdapter(Context context, ArrayList<Result> list) {
+    public ShowAdapter(Context context, ArrayList<Result> list) {
         this.list = list;
         this.context = context;
-        mIComingSoonAdapter = (AiringShowAdapter.IComingSoonAdapter) context;
+        mIComingSoonAdapter = (ShowAdapter.IComingSoonAdapter) context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.airing_list, parent, false);
+                .inflate(R.layout.pop_list, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
 
     @Override
-    public void onBindViewHolder(AiringShowAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ShowAdapter.ViewHolder holder, int position) {
         Result result = list.get(position);
         holder.tvName.setText(result.original_name);
         holder.tvDesc.setText(result.overview);
         Glide.with(context)
                 .load("http://image.tmdb.org/t/p/w500" + result.backdrop_path)
                 .into(holder.iv_poster);
+
+
     }
 
     @Override

@@ -11,11 +11,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.adapter.AiringShowAdapter;
 import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.adapter.PopularShowAdapter;
+import id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist.adapter.ShowAdapter;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, AiringShowAdapter.IComingSoonAdapter, PopularShowAdapter.ISourceAdapter {
+        implements NavigationView.OnNavigationItemSelectedListener, ShowAdapter.IComingSoonAdapter, PopularShowAdapter.ISourceAdapter {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
