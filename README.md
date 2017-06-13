@@ -1,6 +1,6 @@
 # TV NATION
 # Link APK
-[Open APK Link](https://drive.google.com/file/d/0Byte9HRlWLcUSXl1V1Itb2xRRlE/view?usp=sharing)
+[Open APK Link](https://drive.google.com/file/d/0Byte9HRlWLcUX1BpZHpTdmN1RlE/view?usp=sharing)
 
 # Deskripsi Singkat Aplikasi
 Aplikasi TV Nation adalah aplikasi yang dibuat untuk memudahkan user dalam menemukan tayangan tv baru untuk binge-watching atau marathons. Pada aplikasi ini, pencarian film dapat berdasarkan popularitas film atau film yang saat ini sedang tayang (season baru). User juga dapat mengecek film apa yang tayang pada hari ini, sehingga user bisa menemukan acara/tayangan yang bisa langsung ia tonton di TV.
