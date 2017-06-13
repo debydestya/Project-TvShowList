@@ -1,6 +1,7 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl206.tvshowlist;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -57,6 +58,11 @@ public class AiringFragment extends Fragment {
     }
 
     private void downloadDataSources() {
+
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("Loading data ...");
+        progressDialog.show();
+
         String url = "https://api.themoviedb.org/3/tv/on_the_air?api_key=084dce461c433fe125d98636470b032c";
 
         GsonGetRequest<SourcesResponse> myRequest = new GsonGetRequest<SourcesResponse>
@@ -67,6 +73,7 @@ public class AiringFragment extends Fragment {
                         Log.d("FLOW", "onResponse: " + (new Gson().toJson(response)));
 
                         mList.addAll(response.results);
+                        progressDialog.dismiss();
                         mAdapter.notifyDataSetChanged();
 
                     }
@@ -75,6 +82,7 @@ public class AiringFragment extends Fragment {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        progressDialog.dismiss();
                         Log.e("FLOW", "onErrorResponse: ", error);
                     }
                 });
